@@ -1,0 +1,34 @@
+library (ggplot2)
+library (gganimate)
+library (dplyr)
+library (readxl)
+
+# loading in data
+nbaPerGameStats <- read_xlsx('nbaTeamStatsSeasons.xlsx')
+
+# Creating variables for the horizontal & vertical lines which will show league averages for that specific season.  
+nbaPerGameStats
+g <- nbaPerGameStats %>%
+  group_by(Season) %>%
+  mutate(mean_threesAttempted = mean(threesAttempted),
+         mean_AST = mean(AST),
+         mean_TS = mean(TS),
+         mean_PTS = mean(PTS))
+
+# graph + animation
+ppg <- ggplot(g, aes(PTS, threesAttempted, col = TS)) +
+  geom_point(size = 3) +
+  geom_hline(aes(yintercept = mean_threesAttempted), color = 'blue', linetype = 'dashed') +
+  geom_vline(aes(xintercept = mean_PTS), color = 'blue', linetype = 'dashed') +
+  scale_color_gradient(low = 'green', high = 'red') +
+  theme(legend.title = element_text('Team TS%'), legend.background = element_rect(fill = 'snow2'),
+        plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
+        plot.title = element_text(hjust = 0.5)) +
+  xlab("Points per Game") +
+  ylab("Attempted Threes per Game") + labs(color = "Team TS%") +
+  labs(caption = 'Data via basketball-reference.com', title = 'Points Per Game vs 3 Pointers Attempted by Team')
+animated_ppg <- ppg + transition_time(as.integer(Season)) + labs(subtitle = 'Season: {frame_time}')
+animate(animated_ppg, nframes = 300)
+
+anim_save("PPG vs 3PA Attempted by Team from 1980-2019.gif", animated_ppg, nframes = 300)
