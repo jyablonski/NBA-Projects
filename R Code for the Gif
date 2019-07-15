@@ -1,0 +1,31 @@
+library (gganimate)
+library (readr)
+library (readxl)
+library (stringr)
+library (ggplot2)
+library(ggthemes)
+
+nba3 <- read_xlsx('nbaPlayoffgganimate3ts.xlsx')
+
+str(nba3)
+# removing first row in the nba dataset bc of xlsx header issue
+nba3
+nba3 <- nba3[-1, ]
+
+k <- ggplot(nba3, aes(x = TeamTS, y = Player)) +
+  geom_point(shape = 21, stroke = 1, aes(fill = Tm, size = 2)) +
+  theme(legend.title = element_blank(), legend.position = 'none', plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5)) +
+  xlab("Team True Shooting Percentage") +
+  labs(caption = 'Data via pbpstats.com', title = "Team's Postseason True Shooting Percentage with Player")
+plot(k)
+anim1 <- k +
+  transition_states(On_or_off,
+                    transition_length = 2,
+                    state_length = 2, 
+                    wrap = TRUE) +
+  shadow_mark(past = TRUE, future = FALSE, alpha = 0.25, exclude_layer = 2:30) +
+  labs(subtitle = "{closest_state}")
+anim1
+
+anim_save("Postseason Team True Shooting Percentage.gif", anim1)
