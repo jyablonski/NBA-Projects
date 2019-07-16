@@ -1,0 +1,34 @@
+library (gganimate)
+library (readr)
+library (readxl)
+library (stringr)
+library (ggplot2)
+library(ggthemes)
+
+nba2 <- read_xlsx('nbaPlayoffgganimate2.xlsx')
+
+str(nba2)
+# removing first row in the nba dataset bc of xlsx header issue
+nba2
+nba2 <- nba2[-1, ]
+
+
+u <- ggplot(sort1, aes(x = PPG, y = reorder(Player, Differential))) +
+  geom_point(shape = 21, stroke = 1, aes(fill = Tm, size = 2)) +
+  theme(legend.title = element_text(), legend.background = element_rect(fill = 'snow2'), legend.position = 'none',
+        plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
+        plot.title = element_text(hjust = 0.5)) +
+  xlab("Points per Game") +
+  labs(caption = 'Data via basketball-reference.com', title = "Player's PPG in Regular Season vs Playoffs")
+plot(u)
+anim2 <- u +
+  transition_states(Playoff_or_reg,
+                    transition_length = 2,
+                    state_length = 2, 
+                    wrap = TRUE) +
+  shadow_mark(past = TRUE, future = FALSE, alpha = 0.25) +
+  labs(subtitle = "{closest_state}")
+anim2
+
+anim_save("Regular Season vs Playoffs PPG.gif", anim2)
