@@ -1,0 +1,36 @@
+library (ggplot2)
+library (gganimate)
+library (dplyr)
+library (readxl)
+
+# loading in data
+nbaPerGameStats <- read_xlsx('nbaTeamStatsSeasons.xlsx')
+
+# Creating variables for the horizontal & vertical lines which will show league averages for that specific season.  
+nbaPerGameStats
+str(nbaPerGameStats)
+str(g)
+g <- nbaPerGameStats %>%
+  group_by(Season) %>%
+  mutate(mean_threesAttempted = mean(threesAttempted),
+         mean_AST = mean(AST),
+         mean_TS = mean(TS),
+         mean_PTS = mean(PTS))
+
+# season = x axis, ts% = y axis.  color = avg 3pa
+ts <- ggplot(g, aes(x = Season, y = mean_TS, col = mean_threesAttempted)) +
+  geom_point(size = 3) +
+  scale_color_gradient(low = 'green', high = 'red') +
+  theme(legend.title = element_text(), legend.background = element_rect(fill = 'snow2'),
+        plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
+        plot.title = element_text(hjust = 0.5)) +
+  xlab('Season') +
+  ylab('League Average TS%') + labs(color = 'AVG 3PA') +
+  labs(caption = 'Data via basketball-reference.com', title = 'League Average TS% by Season') 
+plot(ts)
+
+animated_ts <- ts + transition_time(as.integer(Season)) + labs(subtitle = 'Season: {frame_time}') + shadow_mark(past = TRUE)
+animate(animated_ts, nframes = 300)
+
+anim_save("League Average TS% by Season.gif", animated_ts, nframes = 300)
