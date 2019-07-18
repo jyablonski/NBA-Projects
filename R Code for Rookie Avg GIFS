@@ -1,0 +1,73 @@
+library (ggplot2)
+library (gganimate)
+library (dplyr)
+library (readxl)
+
+# loading in data
+nbaRookieStats <- read_xlsx('2009-2018 rookie stats data.xlsx')
+
+# creating average field columns for each season 
+nbaRookieStats
+str(nbaRookieStats)
+str(g)
+g <- nbaRookieStats %>%
+  group_by(DraftYear) %>%
+  mutate(mean_threesAttempted = mean(threePointersAttempted),
+         mean_threesMade = mean(threePointersMade),
+         mean_TS = mean(TSPercentage),
+         mean_PPG = mean(PPG))
+g
+# building the traditional point gif - 3PA
+j <- ggplot(g, aes(x = DraftYear, y = mean_threesAttempted, col = mean_TS)) +
+  geom_point(size = 3) +
+  scale_color_gradient(low = 'green', high = 'red') +
+  theme(legend.title = element_text(), legend.background = element_rect(fill = 'snow2'),
+        plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
+        plot.title = element_text(hjust = 0.5)) +
+  xlab('Season') +
+  ylab('Average Three Pointers Attempted per Game') + labs(color = 'AVG TS%') +
+  labs(caption = 'Data via basketball-reference.com', title = 'Rookie Three Pointers Attempted by Season') 
+plot(j)
+
+animated_j <- j + transition_time(as.integer(DraftYear)) + labs(subtitle = 'Draft Year: {frame_time}') + shadow_mark(past = TRUE)
+animate(animated_j, nframes = 300)
+
+anim_save("Rookie Average Threes Taken per Game.gif", animated_j, nframes = 150)
+
+# line graph animation
+p <- ggplot(g, aes(x = DraftYear, y = mean_threesAttempted, col = mean_TS)) +
+  geom_line() +
+  geom_segment(aes(xend = 2018, yend = mean_threesAttempted), linetype = 2, color = 'grey') +
+  geom_point(size = 2) +
+  scale_color_gradient(low = 'green', high = 'red') +
+  transition_reveal(DraftYear) +
+  coord_cartesian(clip = 'off') +
+  labs(title = 'Rookie Average Threes Taken per Game by Season', y = 'Average Three Pointers Attempted per Game',
+       color = 'AVG TS%', x = 'Season') +
+  theme(legend.title = element_text(), legend.background = element_rect(fill = 'snow2'),
+        plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
+        plot.title = element_text(hjust = 0.5))
+p
+anim_save('Rookie Average Threes Taken line Graph.gif', p)
+
+
+# building the traditional point gif - PPG
+k <- ggplot(g, aes(x = DraftYear, y = mean_PPG, col = mean_TS)) +
+  geom_point(size = 3) +
+  scale_color_gradient(low = 'green', high = 'red') +
+  theme(legend.title = element_text(), legend.background = element_rect(fill = 'snow2'),
+        plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
+        plot.title = element_text(hjust = 0.5)) +
+  xlab('Season') +
+  ylab('Average Rookie PPG') + labs(color = 'AVG TS%') +
+  labs(caption = 'Data via basketball-reference.com', title = 'Average Rookie Points per Game by Season') 
+plot(k)
+
+animated_k <- k + transition_time(as.integer(DraftYear)) + labs(subtitle = 'Draft Year: {frame_time}') + shadow_mark(past = TRUE)
+animate(animated_k, nframes = 300)
+
+anim_save("Rookie Average PPG by Season.gif", animated_k, nframes = 150)
+
