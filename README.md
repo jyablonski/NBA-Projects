@@ -18,3 +18,4 @@ The horizontal & vertical lines are the season averages for that specific year.
 
 ![Rookie Average PPG by Season](https://user-images.githubusercontent.com/16946556/61489738-34d77200-a960-11e9-995c-d84008188740.gif)
 
+![Rookie Average Threes Taken per Game](https://user-images.githubusercontent.com/16946556/61489754-428cf780-a960-11e9-9884-b0aea8274eda.gif)
