@@ -8,7 +8,8 @@
 The horizontal & vertical lines are the season averages for that specific year.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-![League Average Three Pointers Attempted by Season](https://user-images.githubusercontent.com/16946556/61549793-cb11a380-aa05-11e9-9646-c9a0a1273c75.gif)
+![League Average Three Pointers Attempted by Season](https://user-images.githubusercontent.com/16946556/61552600-1da28e00-aa0d-11e9-907d-6ab109be2ee5.gif)
+
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 ![League Average TS% by Season](https://user-images.githubusercontent.com/16946556/61324601-b0ea8200-a7c7-11e9-8b47-061751cbad90.gif)
