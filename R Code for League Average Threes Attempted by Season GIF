@@ -20,13 +20,14 @@ g <- nbaPerGameStats %>%
 # building the graph
 threePA <- ggplot(g, aes(x = Season, y = mean_threesAttempted, col = mean_TS)) +
   geom_point(size = 3) +
+  geom_text(aes(x = 18.1, label = Player), hjust = 0) +
   scale_color_gradient(low = 'green', high = 'red') +
   theme(legend.title = element_text(), legend.background = element_rect(fill = 'snow2'),
         plot.background = element_rect(fill = "snow2"),
         panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
         plot.title = element_text(hjust = 0.5)) +
   xlab('Season') +
-  ylab('League Average Three Pointers Attempted') + labs(color = 'AVG TS%') +
+  ylab('League Average Three Pointers Attempted per Game') + labs(color = 'AVG TS%') +
   labs(caption = 'Data via basketball-reference.com', title = 'League Average Three Pointers Attempted by Season') 
 plot(threePA)
 
