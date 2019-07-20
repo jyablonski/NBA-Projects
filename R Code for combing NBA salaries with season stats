@@ -1,0 +1,55 @@
+library(rvest)
+library(stringr)
+library(magrittr)
+library(data.table)
+library(tidyverse)
+# Retrieving salary data from basketball-reference and adding it to the season's stats page
+
+# reading in the html page
+page <- read_html('https://www.basketball-reference.com/contracts/players.html')
+salary.table <- page %>% html_table(header = FALSE) %>% extract2(1)
+
+names(salary.table) <- salary.table[2,]
+
+# deleting useless rows and getting rid of all columns except player name and salary.
+salary.table <- salary.table[-1,]
+salary.table <- salary.table[-1, 2:4]
+names(salary.table)[3] <- "Salary"
+head(salary.table)
+salary.table
+
+# filtering out more useless rows
+salary.table <- salary.table %>%
+  filter(Player != "" & Player != "Player")
+
+# getting rid of the commas + dollar signs to make numeric values
+salary.table$Salary <- 
+  gsub(",", "", salary.table$Salary)
+salary.table$Salary <- 
+  gsub('\\$', '', salary.table$Salary)
+salary.table$Salary <- as.numeric(salary.table$Salary)
+str(salary.table)
+
+# saving salary table
+write.csv(salary.table, "2019_NBA_Salary_Data.csv")
+
+
+# reading data in to combine tables ----
+salary.table <- read.csv("2019_NBA_Salary_Data.csv")
+stats.table <- read_xlsx("18.19nbaData.xlsx")
+salary.table <- as_tibble(salary.table)
+stats.table <- stats.table[-1,]
+stats.table
+
+# merging data together into 1 table ----
+stats_salary <- merge(stats.table, salary.table, by.x = 'Player', by.y = 'Player')
+stats_salary
+str(stats_salary)
+
+# renaming team name & dropping extra columns
+stats_salary <- stats_salary %>%
+  rename(Team = Tm.x) %>%
+  select(-Tm.y, -X)
+
+# saving as csv
+write.csv(stats_salary, file = "stats_salary1.csv")
