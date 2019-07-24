@@ -14,7 +14,8 @@ The horizontal & vertical lines are the season averages for that specific year.
 
 ![League Average TS% by Season](https://user-images.githubusercontent.com/16946556/61324601-b0ea8200-a7c7-11e9-8b47-061751cbad90.gif)
 ------------------------------------------------------------------------------------------------------------------------------------------
-![Regular Season vs Playoffs PPG](https://user-images.githubusercontent.com/16946556/61327281-6966f480-a7cd-11e9-909a-d53a40bbcc5a.gif)
+![Regular Season vs Playoffs PPG](https://user-images.githubusercontent.com/16946556/61835749-f8a98300-ae31-11e9-86f3-cfc0a1b1b357.gif)
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 2009-2018 Rookie Graphs for Average 3PA and PPG
