@@ -1,6 +1,7 @@
 # NBA-Projects / Jacob Yablonski
 
-![Postseason Team True Shooting Percentage](https://user-images.githubusercontent.com/16946556/61254024-fbacc100-a717-11e9-882a-279ba7f9e880.gif)
+![Postseason Team True Shooting Percentage](https://user-images.githubusercontent.com/16946556/61836158-ce58c500-ae33-11e9-84aa-064a42b06ea2.gif)
+
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 ![PPG vs 3PA Attempted by Team from 1980-2019](https://user-images.githubusercontent.com/16946556/61255477-9956bf00-a71d-11e9-893f-55dec5c029df.gif)
