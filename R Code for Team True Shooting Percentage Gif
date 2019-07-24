@@ -12,11 +12,15 @@ str(nba3)
 nba3
 nba3 <- nba3[-1, ]
 
-k <- ggplot(nba3, aes(x = TeamTS, y = Player)) +
+k <- ggplot(nba3, aes(x = TeamTS, y = reorder(Player, Differential))) +
   geom_point(shape = 21, stroke = 1, aes(fill = Tm, size = 2)) +
-  theme(legend.title = element_blank(), legend.position = 'none', plot.background = element_rect(fill = "snow2"),
-        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5)) +
+  geom_point(shape = 21, stroke = 1, alpha = 0.25, aes(fill = Tm, col = Tm, x = Offcourt, y = Player, size = 2)) +
+  theme(legend.title = element_text(), legend.background = element_rect(fill = 'snow2'), legend.position = 'none',
+      plot.background = element_rect(fill = "snow2"),
+      panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
+      plot.title = element_text(hjust = 0.5)) +
   xlab("Team True Shooting Percentage") +
+  ylab('Player') +
   labs(caption = 'Data via pbpstats.com', title = "Team's Postseason True Shooting Percentage with Player")
 plot(k)
 anim1 <- k +
@@ -24,7 +28,6 @@ anim1 <- k +
                     transition_length = 2,
                     state_length = 2, 
                     wrap = TRUE) +
-  shadow_mark(past = TRUE, future = FALSE, alpha = 0.25, exclude_layer = 2:30) +
   labs(subtitle = "{closest_state}")
 anim1
 
