@@ -1,0 +1,60 @@
+library (gganimate)
+library (readr)
+library (readxl)
+library (stringr)
+library (ggplot2)
+library(ggthemes)
+library (viridis)
+
+
+nba5 <- read_xlsx('faceted heatmap with playoff games played.xlsx')
+
+str(nba5)
+nba5
+
+# replacing team names with respective acronyms
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Washington Wizards', 'WAS')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Utah Jazz', 'UTA')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Toronto Raptors', 'TOR')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'San Antonio Spurs', 'SAS')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Sacramento Kings', 'SAC')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Portland Trail Blazers', 'POR')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Phoenix Suns', 'PHX')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Philadelphia 76ers', 'PHI')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Orlando Magic', 'ORL')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Oklahoma City Thunder', 'OKC')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'New York Knicks', 'NYK')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'New Orleans Pelicans', 'NOP')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'New Jersey Nets', 'BRK')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Brooklyn Nets', 'BRK')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Minnesota Timberwolves', 'MIN')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Milwaukee Bucks', 'MIL')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Miami Heat', 'MIA')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Memphis Grizzlies', 'MEM')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Los Angeles Lakers', 'LAL')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Los Angeles Clippers', 'LAC')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Indiana Pacers', 'IND')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Houston Rockets', 'HOU')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Golden State Warriors', 'GSW')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Detroit Pistons', 'DET')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Denver Nuggets', 'DEN')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Dallas Mavericks', 'DAL')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Cleveland Cavaliers', 'CLE')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Chicago Bulls', 'CHI')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Charlotte Hornets', 'CHO')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Boston Celtics', 'BOS')
+nba5$Team <- replace(nba5$Team, nba5$Team == 'Atlanta Hawks', 'ATL')
+
+
+
+# building the graph
+ggplot(nba5, aes(x = Season, y = Team, fill = GP)) +
+  geom_tile(color = 'white', size = 0.025) +
+  scale_fill_viridis(name = '# Games Played') +
+  xlab('Season') +
+  ylab('Team') +
+  labs(caption = 'Data via basketball-reference.com', title = 'Playoff Games Played by Team from 1985 to 2019') +
+  theme(legend.background = element_rect(fill = 'snow2'), legend.position = 'top',
+        plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
+        plot.title = element_text(hjust = 0.5), panel.grid.major = element_blank())
