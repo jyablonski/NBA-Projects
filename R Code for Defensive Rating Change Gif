@@ -1,0 +1,34 @@
+library (gganimate)
+library (readr)
+library (readxl)
+library (stringr)
+library (ggplot2)
+library(ggthemes)
+
+nba4 <- read_xlsx('gganimateDrtgTest.xlsx')
+
+str(nba4)
+nba4
+
+# building the graph
+x <- ggplot(nba4, aes(x = Drtg, y = reorder(Team, Differential))) +
+  geom_point(shape = 21, stroke = 1, aes(fill = Differential, size = 2)) +
+  geom_point(shape = 21, stroke = 1, alpha = 0.25, aes(fill = Differential, col = Differential, x = Playoffs, y = Team, size = 2)) +
+  theme(legend.title = element_text(), legend.background = element_rect(fill = 'snow2'), legend.position = 'none',
+        plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
+        plot.title = element_text(hjust = 0.5)) +
+  xlab("Defensive Rating") +
+  ylab('Player') +
+  labs(caption = 'Data via basketball-reference.com', title = "Team's Change in Defensive Rating Regular Season vs Playoffs")
+plot(x)
+# animation
+anim4 <- x +
+  transition_states(playoff_or_reg,
+                    transition_length = 1,
+                    state_length = 1, 
+                    wrap = TRUE) +
+  labs(subtitle = "{closest_state}")
+anim4
+
+anim_save("Change in Defensive Rating Regular Season vs Playoffs.gif", anim4)
