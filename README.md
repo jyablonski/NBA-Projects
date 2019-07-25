@@ -27,3 +27,4 @@ The horizontal & vertical lines are the season averages for that specific year.
 
 ![Rookie Average Threes Taken line Graph](https://user-images.githubusercontent.com/16946556/61489765-4de02300-a960-11e9-91a9-9ae78ca1c544.gif)
 ------------------------------------------------------------------------------------------------------------------------------------------
+![Change in Defensive Rating Regular Season vs Playoffs](https://user-images.githubusercontent.com/16946556/61836331-b46bb200-ae34-11e9-84ce-faaa3aee0aab.gif)
