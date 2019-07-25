@@ -1,7 +1,8 @@
 # NBA-Projects / Jacob Yablonski
 
 
-https://i.imgur.com/8G3Mgq3.png
+![playoff games played heat map](https://user-images.githubusercontent.com/16946556/61893972-35be5580-aec4-11e9-9cd6-cb1c91617239.png)
+
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Postseason Team True Shooting Percentage](https://user-images.githubusercontent.com/16946556/61836158-ce58c500-ae33-11e9-84aa-064a42b06ea2.gif)
