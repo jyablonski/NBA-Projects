@@ -26,4 +26,4 @@ The horizontal & vertical lines are the season averages for that specific year.
 ![Rookie Average Threes Taken per Game](https://user-images.githubusercontent.com/16946556/61489754-428cf780-a960-11e9-9884-b0aea8274eda.gif)
 
 ![Rookie Average Threes Taken line Graph](https://user-images.githubusercontent.com/16946556/61489765-4de02300-a960-11e9-91a9-9ae78ca1c544.gif)
-
+------------------------------------------------------------------------------------------------------------------------------------------
