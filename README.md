@@ -1,7 +1,7 @@
 # NBA-Projects / Jacob Yablonski
 
 
-[PlayoffGP.pdf](https://github.com/jyablonski/NBA-Projects/files/3432577/PlayoffGP.pdf)
+https://i.imgur.com/8G3Mgq3.png
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Postseason Team True Shooting Percentage](https://user-images.githubusercontent.com/16946556/61836158-ce58c500-ae33-11e9-84aa-064a42b06ea2.gif)
