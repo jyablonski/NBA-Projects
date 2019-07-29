@@ -1,0 +1,30 @@
+library (ggplot2)
+library (gganimate)
+library (dplyr)
+library (readxl)
+library (tidyverse)
+
+nbaFoulStats <- read_xlsx("pbp foul stats.xlsx")
+nbaFoulStats
+
+nbaFoulStats <- nbaFoulStats %>%
+  group_by(Team) %>%
+  mutate(TeamTotal3PTShootingFoulsDrawn = sum(`3ptShootingFoulsDrawn`),
+         TeamTotal2PTShootingFoulsDrawn = sum(`2ptShootingFoulsDrawn`))
+
+x <- ggplot(nbaFoulStats, aes(x = TeamTotal3PTShootingFoulsDrawn, y = Team))+
+  geom_point(size = 3, shape = 21, fill = 'black') +
+  geom_point(aes(x = 95, y = 11, size = 2, col = '#CC0000', fill = '#CC0000')) +
+  annotate(geom = 'text', x = 95, y = 10, label = 'James Harden', col = 'black') +
+  annotate(geom = 'text', x = 127, y = 10, label = 'Houston', col = 'black') +
+  theme(legend.title = element_text(), legend.background = element_rect(fill = 'snow2'), legend.position = 'none',
+        plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5), axis.title.y = element_blank(),
+        plot.title = element_text(hjust = 0.5)) +
+  xlab("3 Pt Shooting Fouls Drawn") +
+  labs(caption = 'Data via pbpstats.com', title = "3 Pt Shooting Fouls Drawn grouped by Team in the 2019 NBA Regular Season")
+  
+plot(x)
+
+
+# 1028 total 3s attempted for harden, 95 3pt shooting fouls drawn.  9.24% of the time.  
