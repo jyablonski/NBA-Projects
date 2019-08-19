@@ -4,6 +4,7 @@ library (dplyr)
 library (readxl)
 library (tidyverse)
 
+
 nbaFoulStats <- read_xlsx("pbp foul stats.xlsx")
 nbaFoulStats
 
