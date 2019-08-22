@@ -35,7 +35,7 @@ Sorted in descending order by the players with the biggest improvement in PPG fr
 
 ![Rookie Average Threes Taken line Graph](https://user-images.githubusercontent.com/16946556/61489765-4de02300-a960-11e9-91a9-9ae78ca1c544.gif)
 
-Sorted in descending order by the players with the biggest improvement in PPG from Regular Season to Playoffs.  The insights to be drawn here are that the NBA Draft is very unpredicatable and up and down, some years you will have a handful of standout players and other years there will be a complete lack of superstar talent (2017).  There is also an increasing trend of 3PA each season, rookies coming in are expected to be shooting three pointers and those who can't shoot are generally at a significant disadvantage in terms of being able to stay in the league.  
+The insights to be drawn here are that the NBA Draft is very unpredicatable and up and down, some years you will have a handful of standout players and other years there will be an overall lack of good talent.  There is also an increasing trend of 3PA each season, rookies coming in are expected to be shooting three pointers and those who can't shoot are generally at a significant disadvantage in terms of being able to stay in the league.  
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 ![Change in Defensive Rating Regular Season vs Playoffs](https://user-images.githubusercontent.com/16946556/61836331-b46bb200-ae34-11e9-84ce-faaa3aee0aab.gif)
