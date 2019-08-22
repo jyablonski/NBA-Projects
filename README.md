@@ -23,6 +23,8 @@ The horizontal & vertical lines are the season averages for that specific year.
 ------------------------------------------------------------------------------------------------------------------------------------------
 ![Regular Season vs Playoffs PPG](https://user-images.githubusercontent.com/16946556/61835749-f8a98300-ae31-11e9-86f3-cfc0a1b1b357.gif)
 
+Sorted in descending order by the players with the biggest improvement in PPG from Regular Season to Playoffs.
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 2009-2018 Rookie Graphs for Average 3PA and PPG
