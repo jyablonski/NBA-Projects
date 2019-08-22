@@ -10,11 +10,12 @@ Below are a handful of visualizations I have created, along with my thoughts / g
 
 ![Postseason Team True Shooting Percentage](https://user-images.githubusercontent.com/16946556/61836158-ce58c500-ae33-11e9-84aa-064a42b06ea2.gif)
 
+Sorted in descending order from most impactful to least impactful players by the Team TS% statistic.  
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 ![PPG vs 3PA Attempted by Team from 1980-2019](https://user-images.githubusercontent.com/16946556/61255477-9956bf00-a71d-11e9-893f-55dec5c029df.gif)
 
-The horizontal & vertical lines are the season averages for that specific year.
+The horizontal & vertical dotted lines are the season averages for that specific year.
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 ![League Average Three Pointers Attempted by Season](https://user-images.githubusercontent.com/16946556/61552600-1da28e00-aa0d-11e9-907d-6ab109be2ee5.gif)
