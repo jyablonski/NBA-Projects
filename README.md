@@ -42,6 +42,10 @@ The insights to be drawn here are that the NBA Draft is very unpredicatable and 
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 ![Change in Defensive Rating Regular Season vs Playoffs](https://user-images.githubusercontent.com/16946556/61836331-b46bb200-ae34-11e9-84ce-faaa3aee0aab.gif)
+
+Sorted in descending order by teams that improved their Defensive Rating in the 2019 Playoffs relative to their Regular Season equivalent.  
 ------------------------------------------------------------------------------------------------------------------------------------------
 ![D52QFYd](https://user-images.githubusercontent.com/16946556/62069350-ee4e0700-b1ec-11e9-85bb-0df6f4c838c9.png)
+
+This was just a quick graphic to show the absurdity of James Harden in the 2018-2019 NBA Regular Season.  He drew more fouls on three point attempts than any other team COMBINED last season.
 
