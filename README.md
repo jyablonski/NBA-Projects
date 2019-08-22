@@ -2,7 +2,7 @@
 
 All the code uploaded onto my Github is using R.  I'm relatively new to the language but i've enjoyed learning it and improving my skills with it.  I'm familiar with using the Tidyverse (specifically dplyr, readr, ggplot2), GGanimate, and Caret Packages.  I have a working knowledge of many machine learning algorithms and techniques but I mostly just put visualization code on here.  
 
-Below are a handful of visualizations I have created, along with my thoughts / general insights derived from them.  NBA data is enjoyable for me to work with because it's probably my biggest hobby, and all sorts of data is easy to pull and also readily available.
+Below are a handful of visualizations I have created, along with my thoughts / general insights derived from them where applicable.  NBA data is enjoyable for me to work with because it's probably my biggest hobby, and all sorts of data is easy to pull and also readily available.
 
 ![playoff games played heat map](https://user-images.githubusercontent.com/16946556/61893972-35be5580-aec4-11e9-9cd6-cb1c91617239.png)
 
