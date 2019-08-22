@@ -1,6 +1,6 @@
 # NBA-Projects / Jacob Yablonski
 
-I'm somewhat new to using R but i've enjoyed learning it and improving my skills with it.  I'm familiar with using the Tidyverse (specifically dplyr, readr, ggplot2), GGanimate, and Caret Packages.  I have a working knowledge of many machine learning algorithms and techniques but I mostly just put visualization code on here.  NBA data is enjoyable for me to work with because it's probably my biggest hobby, and all sorts of data is readily available for it that are easy to pull.
+All the code uploaded onto my Github is using R.  I'm relatively new to the language but i've enjoyed learning it and improving my skills with it.  I'm familiar with using the Tidyverse (specifically dplyr, readr, ggplot2), GGanimate, and Caret Packages.  I have a working knowledge of many machine learning algorithms and techniques but I mostly just put visualization code on here.  NBA data is enjoyable for me to work with because it's probably my biggest hobby, and all sorts of data is easy to pull and also readily available.
 
 ![playoff games played heat map](https://user-images.githubusercontent.com/16946556/61893972-35be5580-aec4-11e9-9cd6-cb1c91617239.png)
 
