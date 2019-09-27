@@ -19,7 +19,8 @@ The horizontal & vertical dotted lines are the season averages for that specific
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 ![League Average Three Pointers Attempted by Season](https://user-images.githubusercontent.com/16946556/61552600-1da28e00-aa0d-11e9-907d-6ab109be2ee5.gif)
-To me, this was the most interesting animation I created.  It's fascinating looking at the history of the league, seeing the rise of the 3-point shot, and the variability of the League Average TS% over the years. 
+
+To me, this was the most interesting animation I created.  It's fascinating looking at the history of the league, seeing the steady rise of the 3-point shot, and the variability of the League Average TS% over the years. 
 
 https://www.washingtonpost.com/archive/sports/2001/04/13/nba-approves-zone-defenses-other-changes/b9126ae0-f1b9-4a35-bb3e-a3ea86251375/
 
