@@ -24,13 +24,9 @@ To me, this was the most interesting animation I created.  It's fascinating look
 
 You can see that between 1999-2004, the League Average TS% was at its lowest point in the last 25+ years.  It was also relatively low in 2012, which was the last lockout year.
 
-https://www.washingtonpost.com/archive/sports/2001/04/13/nba-approves-zone-defenses-other-changes/b9126ae0-f1b9-4a35-bb3e-a3ea86251375/
+[The NBA allowing zones starting in the 2001-2002 Season](https://www.washingtonpost.com/archive/sports/2001/04/13/nba-approves-zone-defenses-other-changes/b9126ae0-f1b9-4a35-bb3e-a3ea86251375/) probably contributed to lowering the League Average TS% for a couple of seasons.  Teams hadn’t figured out how to properly space the floor, superstars could now legally be shadowed / double teamed, and efficient 3-point shooters were very difficult to find or develop.  
 
-The NBA allowing zones starting in the 2001-2002 Season probably contributed to lowering the League Average TS% for a couple of seasons.  Teams hadn’t figured out how to properly space the floor, superstars could now legally be shadowed / double teamed, and efficient 3-point shooters were very difficult to find or develop.  
-
-https://slate.com/culture/2006/11/the-nba-hasn-t-become-a-league-dominated-by-offense.html
-
-Hand Check rules were eliminated following the 2003-2004 Season, which probably helped boost the League Average TS% by making it easier for offensive players to score the basketball.  
+[Hand Check rules were eliminated following the 2003-2004 Season](https://slate.com/culture/2006/11/the-nba-hasn-t-become-a-league-dominated-by-offense.html), which probably helped boost the League Average TS% by making it easier for offensive players to score the basketball.  
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------
