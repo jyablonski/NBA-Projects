@@ -26,7 +26,7 @@ You can see that between 1999-2004, the League Average TS% was at its lowest poi
 
 https://www.washingtonpost.com/archive/sports/2001/04/13/nba-approves-zone-defenses-other-changes/b9126ae0-f1b9-4a35-bb3e-a3ea86251375/
 
-The NBA allowing zones starting in the 2001-2002 Season probably contributed to lowering the League Average TS% for a couple of seasons.  Teams hadn’t figured out how to properly space the floor, superstars could be easily shadowed / double teamed, and efficient 3-point shooters were very difficult to find or develop.  
+The NBA allowing zones starting in the 2001-2002 Season probably contributed to lowering the League Average TS% for a couple of seasons.  Teams hadn’t figured out how to properly space the floor, superstars could now legally be shadowed / double teamed, and efficient 3-point shooters were very difficult to find or develop.  
 
 https://slate.com/culture/2006/11/the-nba-hasn-t-become-a-league-dominated-by-offense.html
 
