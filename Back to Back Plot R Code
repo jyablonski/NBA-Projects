@@ -1,0 +1,29 @@
+library (readxl)
+library (gganimate)
+library (tidyverse)
+library (ggplot2)
+
+b2bPtsPlot <- read_xlsx('b2bptsPlot2.xlsx')
+gg <- ggplot(b2bPtsPlot, aes(x = avg_pts, y = reorder(nameTeam, differential))) +
+  geom_point(shape = 21, stroke = 1, aes(fill = nameTeam, size = 2)) +
+  geom_point(shape = 21, stroke = 1, alpha = 0.25, aes(fill = nameTeam, col = nameTeam,
+                                                       x = avg_pts_normal, y = nameTeam, size = 2)) +
+  labs(title = "Is there a difference in a Team's PPG if it's a Back to Back?",
+       subtitle = "NBA 2018-2019 Regular Season",
+       caption = glue::glue("2018 - 2019 NBA Regular Season | data via nbastatR")) + 
+  xlab('Average Points Scored') +
+  ylab('Team') +
+  theme(legend.title = element_text(), legend.background = element_rect(fill = 'snow2'), legend.position = 'none',
+        plot.background = element_rect(fill = "snow2"),
+        panel.background = element_rect(fill = 'snow2'), plot.subtitle = element_text(hjust = 0.5),
+        plot.title = element_text(hjust = 0.5))
+plot(gg)
+anim1 <- gg +
+  transition_states(isB2BSecond,
+                    transition_length = 2,
+                    state_length = 2, 
+                    wrap = TRUE) +
+  labs(subtitle = "{closest_state}")
+anim1
+
+anim_save("Back to Back PPG Gif.gif", anim1)
