@@ -60,6 +60,7 @@ This was just a quick graphic to show the absurdity of James Harden in the 2018-
 ![Back to Back PPG Gif](https://user-images.githubusercontent.com/16946556/66277284-e3e56480-e850-11e9-875f-bc4110a4be4e.gif)
 
 ------------------------------------------------------------------------------------------------------------------------------------------
-![Team's PF Difference Win vs Loss](https://user-images.githubusercontent.com/16946556/67165609-16588c80-f33c-11e9-8b6f-6e78a9a1ddde.gif)
+![Team's PF Difference Win vs Loss](https://user-images.githubusercontent.com/16946556/67165620-46079480-f33c-11e9-8d98-f217df06e004.gif)
+
 
 Only 5 Teams averaged more Personal Fouls in Wins than Losses.
