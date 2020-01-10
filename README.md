@@ -64,3 +64,8 @@ This was just a quick graphic to show the absurdity of James Harden in the 2018-
 
 
 Only 5 Teams averaged more Personal Fouls in Wins than Losses.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+![rNBApushshift](https://user-images.githubusercontent.com/16946556/72117406-683cfd00-3302-11ea-8100-8da9bf89d8de.png)
+
+365 View of the NBA Reddit's Comment Activity.
