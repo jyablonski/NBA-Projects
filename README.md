@@ -8,6 +8,11 @@ Below are a handful of visualizations I have created, along with my thoughts / g
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
+![rNBApushshift](https://user-images.githubusercontent.com/16946556/72117406-683cfd00-3302-11ea-8100-8da9bf89d8de.png)
+
+365 Day View of the NBA Reddit's Comment Activity.
+
+------------------------------------------------------------------------------------------------------------------------------------------
 ![Postseason Team True Shooting Percentage](https://user-images.githubusercontent.com/16946556/61836158-ce58c500-ae33-11e9-84aa-064a42b06ea2.gif)
 
 Sorted in descending order from most impactful to least impactful players by the Team TS% statistic.  
@@ -65,7 +70,4 @@ This was just a quick graphic to show the absurdity of James Harden in the 2018-
 
 Only 5 Teams averaged more Personal Fouls in Wins than Losses.
 
-------------------------------------------------------------------------------------------------------------------------------------------
-![rNBApushshift](https://user-images.githubusercontent.com/16946556/72117406-683cfd00-3302-11ea-8100-8da9bf89d8de.png)
 
-365 View of the NBA Reddit's Comment Activity.
